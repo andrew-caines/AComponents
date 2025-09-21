@@ -1,0 +1,44 @@
+/* Basic CSS custom properties for component styling */
+:root {
+  /* Primary colors */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  
+  /* Secondary colors */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #1e293b;
+  
+  /* Destructive colors */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  /* Border and input */
+  --border: #d1d5db;
+  --input: #d1d5db;
+  --ring: #3b82f6;
+  
+  /* Background and foreground */
+  --background: #ffffff;
+  --foreground: #111827;
+  
+  /* Accent */
+  --accent: #f9fafb;
+  --accent-foreground: #374151;
+}
+
+/* Dark theme support */
+.dark {
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #3b82f6;
+  --background: #020617;
+  --foreground: #f8fafc;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+}

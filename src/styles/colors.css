@@ -1,0 +1,78 @@
+/* Import Radix color scales - CURATED SELECTION */
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/crimson.css"; /* More professional than red */
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/amber.css"; /* Better for warnings than orange */
+
+/* Dark theme variants - CURATED SELECTION */
+@import "@radix-ui/colors/slate-dark.css";
+@import "@radix-ui/colors/blueDark.css";
+@import "@radix-ui/colors/crimsonDark.css";
+@import "@radix-ui/colors/greenDark.css";
+@import "@radix-ui/colors/amberDark.css";
+
+/* Map Radix colors to your design tokens */
+:root {
+  /* Core Identity Colors */
+  --primary: var(--blue-9); /* The core brand blue */
+  --primary-foreground: white; /* Pure white for max contrast on blue */
+
+  /* Neutrals: The foundation of cleanliness. Using SLATE. */
+  --background: white;
+  --foreground: var(--slate-12); /* A deep, rich near-black for text */
+  --muted: var(--slate-4); /* Very light gray for subtle backgrounds */
+  --muted-foreground: var(--slate-11); /* Medium gray for secondary text */
+
+  --border: var(--slate-6); /* A balanced, neutral gray for borders */
+  --input: var(--slate-7); /* Slightly darker than border for input fields */
+  --ring: var(--blue-7); /* A lighter blue for focus rings. Subtle. */
+
+  /* Component Colors */
+  --secondary: var(--slate-3); /* A very light gray for secondary buttons */
+  --secondary-foreground: var(--slate-12); /* Black text on light gray */
+
+  --accent: var(--slate-2); /* An even lighter gray for accents on hover/focus */
+  --accent-foreground: var(--slate-12);
+
+  /* Semantic Colors */
+  --destructive: var(--crimson-9); /* Crimson is a more mature, less alarming red */
+  --destructive-foreground: white;
+
+  --success: var(--green-9); /* A solid, trustworthy green */
+  --warning: var(--amber-9); /* Amber is a more cautious, professional warning than orange */
+  --info: var(--blue-9); /* Re-use primary blue for info */
+}
+
+/* Dark theme */
+.dark {
+  /* Core Identity Colors (can remain the same for consistency) */
+  --primary: var(--blue-9);
+  --primary-foreground: white;
+
+  /* Neutrals: Flip the scale */
+  --background: var(--slate-1); /* Dark slate background */
+  --foreground: var(--slate-12); /* Keep using the darkest slate for text, it's now near-white */
+
+  --muted: var(--slate-4); /* Now a dark muted area */
+  --muted-foreground: var(--slate-11); /* Lighter gray for secondary text */
+
+  --border: var(--slate-6); /* This shade works well for borders in both themes */
+  --input: var(--slate-7); /* Darker input fields */
+  --ring: var(--blue-7);
+
+  /* Component Colors */
+  --secondary: var(--slate-4); /* Darker than light theme's secondary */
+  --secondary-foreground: var(--slate-12); /* Still the darkest color for text */
+
+  --accent: var(--slate-3); /* Dark accent color */
+  --accent-foreground: var(--slate-12);
+
+  /* Semantic Colors (can remain the same, they are designed for dark themes) */
+  --destructive: var(--crimson-9);
+  --destructive-foreground: white;
+
+  --success: var(--green-9);
+  --warning: var(--amber-9);
+  --info: var(--blue-9);
+}
