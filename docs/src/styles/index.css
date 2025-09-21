@@ -84,6 +84,57 @@ h6 {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border: 1px solid #e2e8f0;
   border-radius: 8px;
+  /* Ensure text is always visible in component previews */
+  color: #1f2937;
+}
+
+/* Dark mode component preview */
+.dark .component-preview {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-color: #475569;
+  color: #f1f5f9;
+}
+
+/* Force readable text colors for all content */
+body, html {
+  color: #1f2937;
+}
+
+/* Ensure labels, descriptions and form elements are visible */
+label, 
+.text-gray-700,
+.text-gray-600,
+.text-gray-500,
+input,
+textarea,
+select {
+  color: #374151 !important;
+}
+
+/* Override any problematic foreground color usage */
+[style*="color: var(--foreground)"],
+.text-foreground {
+  color: #1f2937 !important;
+}
+
+/* Ensure all headings and text elements are visible */
+h1, h2, h3, h4, h5, h6,
+p, span, div,
+.text-gray-900,
+.text-gray-800,
+.text-slate-900,
+.text-slate-800 {
+  color: #1f2937 !important;
+}
+
+/* Component-specific overrides */
+.component-preview *,
+.component-preview label,
+.component-preview input,
+.component-preview textarea,
+.component-preview select,
+.component-preview button {
+  color: #374151 !important;
 }
 
 /* Code highlighting customizations */

@@ -32,14 +32,18 @@ export enum IconType {
   SUCCESS = 'success',
   HELP = 'help',
   QUESTION = 'question',
+  EYE = 'eye',
+  EYE_OFF = 'eye-off',
   
   // Content
   FILE = 'file',
   FOLDER = 'folder',
   IMAGE = 'image',
   DOCUMENT = 'document',
+  FILE_TEXT = 'file-text',
   VIDEO = 'video',
   AUDIO = 'audio',
+  MUSIC = 'music',
   LINK = 'link',
   
   // User & Social
@@ -64,6 +68,10 @@ export enum IconType {
   LOADING = 'loading',
   LOCK = 'lock',
   UNLOCK = 'unlock',
+  
+  // Financial & Measurement
+  DOLLAR = 'dollar',
+  SCALE = 'scale',
   
   // Layout
   GRID = 'grid',

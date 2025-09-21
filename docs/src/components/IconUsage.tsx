@@ -419,6 +419,74 @@ export function IconUsage() {
         </div>
       </div>
 
+      {/* New Icons - Financial & Measurement */}
+      <div className="bg-white rounded-lg shadow-sm border">
+        <div className="border-b px-6 py-4">
+          <h2 className="text-xl font-semibold text-gray-900">💰 Financial & Measurement Icons</h2>
+        </div>
+        
+        <div className="p-6 space-y-6">
+          <p className="text-gray-700">
+            Recently added icons for financial and measurement use cases, perfect for forms and data display.
+          </p>
+
+          <CodeExample
+            title="Financial & Measurement Icons"
+            code={`{/* Financial icons */}
+<div className="flex items-center gap-4">
+  <Icon type={IconType.DOLLAR} color="success" size="lg" />
+  <span>Price: $99.99</span>
+</div>
+
+{/* Measurement icons */}
+<div className="flex items-center gap-4">
+  <Icon type={IconType.SCALE} color="primary" size="lg" />
+  <span>Weight: 2.5 kg</span>
+</div>
+
+{/* In input components */}
+<Input.Decimal 
+  label="Price ($)"
+  leftIcon={IconType.DOLLAR}
+  placeholder="0.00"
+/>
+
+<Input.Decimal 
+  label="Weight (kg)"
+  leftIcon={IconType.SCALE}
+  placeholder="0.0"
+/>`}
+          >
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <Icon type={IconType.DOLLAR} color="success" size="lg" />
+                  <span className="text-gray-700 font-medium">Price: $99.99</span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Icon type={IconType.SCALE} color="primary" size="lg" />
+                  <span className="text-gray-700 font-medium">Weight: 2.5 kg</span>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 p-4 rounded-lg space-y-3">
+                <div className="text-sm text-gray-600 mb-3">Icon showcase:</div>
+                <div className="flex items-center gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <Icon type={IconType.DOLLAR} size="xl" color="success" />
+                    <span className="text-xs font-mono text-gray-600">DOLLAR</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <Icon type={IconType.SCALE} size="xl" color="primary" />
+                    <span className="text-xs font-mono text-gray-600">SCALE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CodeExample>
+        </div>
+      </div>
+
       {/* Icon Weight and Styling */}
       <div className="bg-white rounded-lg shadow-sm border">
         <div className="border-b px-6 py-4">

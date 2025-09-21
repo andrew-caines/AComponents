@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Code, Eye, Settings, Zap } from 'lucide-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -11,7 +11,11 @@ interface ComponentShowcaseProps {
 export function ComponentShowcase({ component }: ComponentShowcaseProps) {
   const [activeTab, setActiveTab] = useState<'preview' | 'code'>('preview')
   const [selectedExample, setSelectedExample] = useState<ExampleDoc>(component.examples[0])
-
+  
+  // Reset selectedExample when component changes
+  useEffect(() => {
+    setSelectedExample(component.examples[0])
+  }, [component.id]) // Reset when component ID changes
   return (
     <div className="space-y-6">
       {/* Component Header */}
@@ -68,11 +72,10 @@ export function ComponentShowcase({ component }: ComponentShowcaseProps) {
                 <button
                   key={index}
                   onClick={() => setSelectedExample(example)}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                    selectedExample === example
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedExample === example
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   {example.title}
                 </button>
@@ -91,22 +94,20 @@ export function ComponentShowcase({ component }: ComponentShowcaseProps) {
             <div className="flex gap-2 border-b">
               <button
                 onClick={() => setActiveTab('preview')}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === 'preview'
-                    ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
-                }`}
+                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${activeTab === 'preview'
+                  ? 'border-blue-500 text-blue-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700'
+                  }`}
               >
                 <Eye className="inline h-4 w-4 mr-1" />
                 Preview
               </button>
               <button
                 onClick={() => setActiveTab('code')}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
-                  activeTab === 'code'
-                    ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
-                }`}
+                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${activeTab === 'code'
+                  ? 'border-blue-500 text-blue-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700'
+                  }`}
               >
                 <Code className="inline h-4 w-4 mr-1" />
                 Code
@@ -120,7 +121,7 @@ export function ComponentShowcase({ component }: ComponentShowcaseProps) {
                   <selectedExample.preview />
                 </div>
               )}
-              
+
               {activeTab === 'code' && (
                 <SyntaxHighlighter
                   language="tsx"
@@ -147,7 +148,7 @@ export function ComponentShowcase({ component }: ComponentShowcaseProps) {
               Props
             </h2>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50">

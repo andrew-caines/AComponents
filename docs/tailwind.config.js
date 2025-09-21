@@ -25,6 +25,8 @@ export default {
         foreground: 'var(--foreground)',
         accent: 'var(--accent)',
         'accent-foreground': 'var(--accent-foreground)',
+        muted: 'var(--muted)',
+        'muted-foreground': 'var(--muted-foreground)',
       },
       animation: {
         'fade-in': 'fadeIn 0.3s ease-out',

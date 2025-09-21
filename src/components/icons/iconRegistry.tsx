@@ -30,6 +30,8 @@ import {
   HiXCircle,
   HiCheckCircle,
   HiQuestionMarkCircle,
+  HiEye,
+  HiEyeSlash,
   HiDocument,
   HiFolder,
   HiPhoto,
@@ -64,7 +66,12 @@ import {
   FaTerminal,
   FaBug,
   FaDatabase,
+  FaDollarSign,
 } from 'react-icons/fa6'
+
+import {
+  RxFontSize,
+} from 'react-icons/rx'
 
 // Icon registry that maps IconType enum to React components
 export const iconRegistry: Record<IconType, React.ComponentType<any>> = {
@@ -101,14 +108,18 @@ export const iconRegistry: Record<IconType, React.ComponentType<any>> = {
   [IconType.SUCCESS]: HiCheckCircle,
   [IconType.HELP]: HiQuestionMarkCircle,
   [IconType.QUESTION]: HiQuestionMarkCircle,
+  [IconType.EYE]: HiEye,
+  [IconType.EYE_OFF]: HiEyeSlash,
 
   // Content
   [IconType.FILE]: HiDocument,
   [IconType.FOLDER]: HiFolder,
   [IconType.IMAGE]: HiPhoto,
   [IconType.DOCUMENT]: HiDocumentText,
+  [IconType.FILE_TEXT]: HiDocumentText,
   [IconType.VIDEO]: HiPlayCircle,
   [IconType.AUDIO]: HiSpeakerWave,
+  [IconType.MUSIC]: HiSpeakerWave,
   [IconType.LINK]: HiLink,
 
   // User & Social
@@ -145,6 +156,10 @@ export const iconRegistry: Record<IconType, React.ComponentType<any>> = {
   [IconType.TERMINAL]: FaTerminal,
   [IconType.BUG]: FaBug,
   [IconType.DATABASE]: FaDatabase,
+
+  // Financial & Measurement
+  [IconType.DOLLAR]: FaDollarSign,
+  [IconType.SCALE]: RxFontSize,
 }
 
 // Export a list of all available icons for documentation/selection purposes

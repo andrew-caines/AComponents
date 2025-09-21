@@ -19,11 +19,15 @@
   
   /* Background and foreground */
   --background: #ffffff;
-  --foreground: #111827;
+  --foreground: #1f2937;
   
   /* Accent */
   --accent: #f9fafb;
   --accent-foreground: #374151;
+  
+  /* Muted */
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
 }
 
 /* Dark theme support */
@@ -41,4 +45,8 @@
   --foreground: #f8fafc;
   --accent: #1e293b;
   --accent-foreground: #f8fafc;
+  
+  /* Muted */
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
 }
